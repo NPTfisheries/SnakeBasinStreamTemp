@@ -31,8 +31,6 @@ sthd_pops = sth_pop %>%
 
 # trim the 200m reach layer
 srb_rch_sf = rch_200 %>%
-  # keep only reaches used by either sp/sum chinook or steelhead (according to StreamNet)
-  # filter(chnk == TRUE | sthd == TRUE) %>%
   # transform to WGS 84, UTM zone 11
   st_transform(default_crs) %>%
   # trim the data to the extent of snake river steelhead populations
